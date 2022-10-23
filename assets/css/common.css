@@ -1,0 +1,113 @@
+:root {
+  --font_0: normal normal normal 30px/1.4em lulo-clean-w01-one-bold,
+    lulo-clean-w05-one-bold, sans-serif;
+  --font_1: normal normal normal 16px/1.4em din-next-w01-light,
+    din-next-w02-light, din-next-w10-light, sans-serif;
+  --font_2: normal normal normal 50px/1.4em avenir-lt-w01_85-heavy1475544,
+    avenir-lt-w05_85-heavy, sans-serif;
+  --font_3: normal normal normal 35px/1.4em lulo-clean-w01-one-bold,
+    lulo-clean-w05-one-bold, sans-serif;
+  --font_4: normal normal bold 20px/1.4em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif;
+  --font_5: normal normal normal 24px/1.4em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif;
+  --font_6: normal normal bold 18px/2em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif;
+  --font_7: normal normal normal 14px/1.4em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif;
+  --font_8: normal normal normal 16px/2em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif;
+  --font_9: normal normal normal 12px/1.4em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif;
+  --font_10: normal normal normal 12px/1.4em din-next-w01-light,
+    din-next-w02-light, din-next-w10-light, sans-serif;
+}
+.burger_icon {
+  display: none;
+}
+.burger_icon i {
+  font-size: 25px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.common_width {
+  width: 950px;
+  margin: 0rem auto;
+}
+
+.header_wrapper {
+  font: var(--fnt, var(--font_1));
+  box-shadow: 0px 4px 27px 0px rgba(45, 45, 45, 0.15);
+
+  width: 100%;
+}
+.header_wrapper nav,
+.header_wrapper header {
+  display: flex;
+  align-items: center;
+}
+.header_wrapper header {
+  justify-content: space-between;
+  height: 71px;
+  padding-top: 10px;
+}
+.header_wrapper header .logo img {
+  width: 70px;
+}
+.header_wrapper nav > * + * {
+  margin-left: 2rem;
+}
+.header_wrapper nav a {
+  font-size: 15px;
+  color: #324158;
+  font-weight: 300;
+  padding-top: 10px;
+}
+.header_wrapper nav a.active {
+  border-top: 5px solid #324158;
+}
+@media screen and (max-width: 1000px) {
+  .common_width {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header_wrapper nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding: 2rem 0rem;
+    background-color: #fff;
+    left: -100%;
+    transition: 0.3s ease all;
+  }
+  .header_wrapper nav.active {
+    left: 0px;
+  }
+  .burger_icon {
+    display: block;
+  }
+  .header_wrapper nav > * + * {
+    margin-left: 0px;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,130 @@
+main {
+  padding-top: 7rem;
+}
+main > h1,
+.skills_area > h1 {
+  font: var(--font_3);
+  color: rgb(50, 65, 88);
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+main > h1 span,
+.skills_area > h1 span {
+  color: #ff2ea1;
+}
+
+main .grid_area {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  grid-gap: 5rem;
+  margin-top: 5rem;
+}
+main .grid_area > img {
+  width: 100%;
+}
+main .grid_area .presentation_area p,
+main .grid_area .presentation_area li,
+.skills_area > p,
+.branding_area ul .head p,
+.branding_area ul li {
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  color: rgb(50, 65, 88);
+  line-height: 30px !important;
+  font: var(--fnt, var(--font_1));
+}
+main .grid_area .presentation_area p span {
+  color: #ff2ea1;
+}
+main .grid_area .presentation_area > * + * {
+  margin-top: 2rem;
+}
+main .grid_area .presentation_area ul {
+  list-style: disc;
+  padding-left: 3rem;
+}
+main .grid_area .presentation_area ul > * + * {
+  margin-top: 0.4rem;
+}
+
+/* skills_area */
+.skills_area {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.skills_area > p {
+  font-size: 20px !important;
+  margin-top: 1rem;
+}
+.skills_area > p span {
+  color: #ff2ea1;
+}
+
+/* branding_area */
+.branding_area {
+  margin-top: 4rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 5rem;
+}
+.branding_area ul .head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.branding_area ul .head p {
+  color: #ff2ea1;
+}
+.branding_area ul .head img {
+  width: 35px;
+  margin-right: 10px;
+}
+.branding_area ul li {
+  font-size: 16px !important;
+}
+.branding_area ul li:not(.head) {
+  padding-left: 3rem;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+footer {
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: #ff2ea1;
+  font-weight: 300;
+  font-size: 12px;
+  font: var(--font_9);
+}
+@media screen and (max-width: 900px) {
+  main .grid_area {
+    grid-template-columns: 1fr;
+  }
+  .branding_area {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  main > h1,
+  .skills_area > h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .skills_area > p {
+    text-align: center;
+  }
+  .branding_area {
+    grid-template-columns: 1fr;
+  }
+}
